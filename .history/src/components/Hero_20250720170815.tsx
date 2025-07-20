@@ -14,7 +14,7 @@ const Hero = () => {
             </p>
           </div>
         
-          
+          </div>
           <div className="flex justify-center space-x-6 pt-8">
             <button className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-colors duration-200 font-medium">
               View Work
