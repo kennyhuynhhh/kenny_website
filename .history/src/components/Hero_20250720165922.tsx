@@ -7,24 +7,13 @@ const Hero = () => {
         <div className="space-y-8">
           <div className="space-y-4">
             <h1 className="text-5xl md:text-7xl font-light text-gray-900 tracking-tight">
-              Kenny Huynh
+              Your Name
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 font-light max-w-2xl mx-auto">
-              Software Engineering Graduate. Mechanical Engineering Student.
+              Creative developer crafting digital experiences with precision and passion
             </p>
           </div>
-          <div className="flex justify-center space-x-6 pt-8">
-            <button
-              onClick={() =>
-                window.open(
-                  'https://kennyhuynhhh.github.io/kenny_website/',
-                  '_blank',
-                  'width=858,height=482'
-                )
-              }
-              className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-colors duration-200 font-medium"
-            ></button>
-            </div>
+          
           <div className="flex justify-center space-x-6 pt-8">
             <button className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-colors duration-200 font-medium">
               View Work
