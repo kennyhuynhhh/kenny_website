@@ -2,12 +2,12 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-50 to-white">
+    <section id="home" className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-200 via-gray-100 to-white">
       <div className="max-w-4xl mx-auto px-6 text-center">
         <div className="space-y-8">
           <div className="space-y-4">
             <h1 className="text-5xl md:text-7xl font-light text-gray-900 tracking-tight">
-              Kenny Huynh
+              dye Huynh
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 font-light max-w-2xl mx-auto">
               Software Engineering Graduate. Mechanical Engineering Student.

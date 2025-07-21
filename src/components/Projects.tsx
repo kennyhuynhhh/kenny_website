@@ -30,8 +30,8 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-24 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="projects" className="py-24">
+      <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-4">
             Projects
