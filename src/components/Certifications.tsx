@@ -46,14 +46,14 @@ const Certifications = () => {
             <div key={index} className="group p-6 border border-gray-200 rounded-xl hover:border-blue-200 hover:shadow-md transition-all duration-200">
               <div className="flex items-start space-x-4">
                 <div className="p-2 bg-blue-100 rounded-lg group-hover:bg-blue-200 transition-colors duration-200">
-                  <Award size={20} className="text-blue-600" />
+                  <Award size={20} className="accent-text" />
                 </div>
                 
                 <div className="flex-1 space-y-2">
                   <h3 className="font-semibold text-gray-900">
                     {cert.title}
                   </h3>
-                  <p className="text-blue-600 font-medium">
+                  <p className="accent-text font-medium">
                     {cert.issuer}
                   </p>
                   <div className="flex justify-between items-center text-sm text-gray-500">

@@ -1,29 +1,34 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
 
-const tabLabels: Record<string, string> = {
-  '/': 'Home',
-  '/experience': 'Experience',
-  '/projects': 'Projects',
-  '/certifications': 'Certifications',
-  '/awards': 'Awards',
-};
+const sections = [
+  { id: 'home', label: 'Home' },
+  { id: 'experience', label: 'Experience' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'certifications', label: 'Certifications' },
+  { id: 'awards', label: 'Awards' },
+];
 
 const Navigation = () => {
-  const location = useLocation();
+  const [activeSection, setActiveSection] = useState('home');
   const [isScrolled, setIsScrolled] = useState(false);
-
-  const sections = [
-    { id: '/', label: 'Home' },
-    { id: '/experience', label: 'Experience' },
-    { id: '/projects', label: 'Projects' },
-    { id: '/certifications', label: 'Certifications' },
-    { id: '/awards', label: 'Awards' },
-  ];
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      // Update active section based on scroll position
+      const sectionElements = sections.map(section => 
+        document.getElementById(section.id)
+      );
+      const currentSection = sectionElements.find(element => {
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          return rect.top <= 100 && rect.bottom >= 100;
+        }
+        return false;
+      });
+      if (currentSection) {
+        setActiveSection(currentSection.id);
+      }
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -37,21 +42,19 @@ const Navigation = () => {
         <div className="flex justify-center">
           <div className="flex space-x-8">
             {sections.map((section) => {
-              const isActive =
-                location.pathname === section.id ||
-                (section.id === '/' && location.pathname === '');
+              const isActive = activeSection === section.id;
               return (
                 <div key={section.id} className="flex flex-col items-center">
-                  <Link
-                    to={section.id}
-                    className={`text-sm font-medium transition-all duration-200 hover:text-blue-600 ${
-                      isActive ? 'text-blue-600' : 'text-gray-600'
+                  <a
+                    href={`#${section.id}`}
+                    className={`text-sm font-medium transition-all duration-200 hover:accent-text ${
+                      isActive ? 'accent-text' : 'text-gray-600'
                     }`}
                   >
                     {section.label}
-                  </Link>
+                  </a>
                   {isActive && (
-                    <span className="mt-1 w-6 h-1 rounded-full bg-blue-600"></span>
+                    <span className="mt-1 w-6 h-1 rounded-full accent-bg"></span>
                   )}
                 </div>
               );

@@ -38,7 +38,7 @@ const Awards = () => {
       case 'innovation':
         return <Star size={20} className="text-yellow-600" />;
       case 'competition':
-        return <Trophy size={20} className="text-blue-600" />;
+        return <Trophy size={20} className="accent-text" />;
       default:
         return <Trophy size={20} className="text-green-600" />;
     }
@@ -85,7 +85,7 @@ const Awards = () => {
                     </span>
                   </div>
                   
-                  <p className="text-blue-600 font-medium">
+                  <p className="accent-text font-medium">
                     {award.organization}
                   </p>
                   

@@ -1,24 +1,46 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// Import page components (to be created)
-import Home from './pages/Home';
-import ExperiencePage from './pages/Experience.tsx';
-import ProjectsPage from './pages/Projects.tsx';
-import CertificationsPage from './pages/Certifications.tsx';
-import AwardsPage from './pages/Awards.tsx';
+import Navigation from './components/Navigation';
+import Hero from './components/Hero';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
+import Certifications from './components/Certifications';
+import Awards from './components/Awards';
 
 const App = () => {
   return (
-    <Router basename="/kenny_website">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/experience" element={<ExperiencePage />} />
-        <Route path="/projects" element={<ProjectsPage />} />
-        <Route path="/certifications" element={<CertificationsPage />} />
-        <Route path="/awards" element={<AwardsPage />} />
-        <Route path="*" element={<Home />} />
-      </Routes>
-    </Router>
+    <div
+      className="min-h-screen"
+      style={{
+        background: 'linear-gradient(95deg, var(--background-accent) 0%, #fff 50%, #e5e7eb 100%)'
+      }}
+    >
+      <Navigation />
+      <div className="relative">
+        <Hero />
+        {/* Bouncing arrow at the bottom center of the Hero section */}
+        <a
+          href="#experience"
+          aria-label="Scroll down"
+          className="absolute left-1/2 transform -translate-x-1/2 bottom-8 animate-bounce z-10"
+          style={{ display: 'block' }}
+        >
+          <svg
+            className="w-12 h-12"
+            style={{ color: 'var(--accent-color)' }}
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </a>
+      </div>
+      <Experience />
+      <Projects />
+      <Certifications />
+      <Awards />
+    </div>
   );
 };
 

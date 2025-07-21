@@ -41,12 +41,12 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <div key={index} className="group">
               <div className="border-l-2 border-gray-100 pl-8 pb-12 relative">
-                <div className="absolute -left-2 top-0 w-4 h-4 bg-blue-600 rounded-full"></div>
+                <div className="absolute -left-2 top-0 w-4 h-4 accent-bg rounded-full"></div>
                 
                 <div className="space-y-4">
                   <div>
                     <h3 className="text-xl font-medium text-gray-900">{exp.role}</h3>
-                    <p className="text-lg text-blue-600 font-medium">{exp.company}</p>
+                    <p className="text-lg accent-text font-medium">{exp.company}</p>
                     <p className="text-sm text-gray-500">{exp.period}</p>
                   </div>
                   

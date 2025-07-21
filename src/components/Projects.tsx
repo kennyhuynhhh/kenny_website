@@ -75,7 +75,7 @@ const Projects = () => {
                 <div className="flex space-x-4 pt-2">
                   <a 
                     href={project.liveUrl}
-                    className="flex items-center space-x-1 text-blue-600 hover:text-blue-700 transition-colors"
+                    className="flex items-center space-x-1 accent-text hover:opacity-90 transition-colors"
                   >
                     <ExternalLink size={16} />
                     <span className="text-sm font-medium">Live Demo</span>
