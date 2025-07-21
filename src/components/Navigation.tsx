@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
-const sections = [
-  { id: 'home', label: 'Home' },
-  { id: 'experience', label: 'Experience' },
-  { id: 'projects', label: 'Projects' },
-  { id: 'certifications', label: 'Certifications' },
-  { id: 'awards', label: 'Awards' },
-];
+  const sections = [
+    { id: 'home', label: 'Home' },
+    { id: 'experience', label: 'Experience' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'certifications', label: 'Certifications' },
+    { id: 'awards', label: 'Awards' },
+  ];
 
 const Navigation = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -49,9 +49,9 @@ const Navigation = () => {
                     href={`#${section.id}`}
                     className={`text-sm font-medium transition-all duration-200 hover:accent-text ${
                       isActive ? 'accent-text' : 'text-gray-600'
-                    }`}
-                  >
-                    {section.label}
+                }`}
+              >
+                {section.label}
                   </a>
                   {isActive && (
                     <span className="mt-1 w-6 h-1 rounded-full accent-bg"></span>

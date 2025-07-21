@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import Experience from './components/Experience';
@@ -7,6 +7,14 @@ import Certifications from './components/Certifications';
 import Awards from './components/Awards';
 
 const App = () => {
+  useEffect(() => {
+    if (window.location.hash) {
+      const id = window.location.hash.replace('#', '');
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
+
   return (
     <div
       className="min-h-screen"
