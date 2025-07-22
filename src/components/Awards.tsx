@@ -59,37 +59,37 @@ const Awards = () => {
     <section id="awards" className="py-24">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-light primary-text mb-4">
             Awards
           </h2>
-          <p className="text-xl text-gray-600 font-light">
+          <p className="text-xl font-light primary-text">
             Recognition for excellence and innovation in technology
           </p>
         </div>
 
         <div className="space-y-6">
           {awards.map((award, index) => (
-            <div key={index} className="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-200">
+            <div key={index} className="group secondary-bg p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-200">
               <div className="flex items-start space-x-4">
-                <div className={`p-3 rounded-lg transition-colors duration-200 ${getIconBg(award.type)}`}>
+                <div className={`p-3 rounded-lg transition-colors duration-200 primary-bg`}>
                   {getIcon(award.type)}
                 </div>
                 
                 <div className="flex-1 space-y-2">
                   <div className="flex justify-between items-start">
-                    <h3 className="text-xl font-semibold text-gray-900">
+                    <h3 className="text-xl font-semibold primary-text">
                       {award.title}
                     </h3>
-                    <span className="text-sm font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
+                    <span className="text-sm font-medium primary-bg px-3 py-1 rounded-full">
                       {award.year}
                     </span>
                   </div>
                   
-                  <p className="accent-text font-medium">
+                  <p className="primary-text">
                     {award.organization}
                   </p>
                   
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="primary-text leading-relaxed">
                     {award.description}
                   </p>
                 </div>

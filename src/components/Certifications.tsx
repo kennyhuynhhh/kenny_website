@@ -33,30 +33,30 @@ const Certifications = () => {
     <section id="certifications" className="py-24">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-light primary-text mb-4">
             Certifications
           </h2>
-          <p className="text-xl text-gray-600 font-light">
+          <p className="text-xl font-light primary-text">
             Professional credentials that validate my expertise
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {certifications.map((cert, index) => (
-            <div key={index} className="group p-6 border border-gray-200 rounded-xl hover:border-blue-200 hover:shadow-md transition-all duration-200">
+            <div key={index} className="group p-6 secondary-bg rounded-xl hover:primary-bg hover:primary-text hover:shadow-md transition-all duration-200">
               <div className="flex items-start space-x-4">
-                <div className="p-2 bg-blue-100 rounded-lg group-hover:bg-blue-200 transition-colors duration-200">
-                  <Award size={20} className="accent-text" />
+                <div className="p-2 primary-bg rounded-lg transition-colors duration-200">
+                  <Award size={20} className="primary-text" />
                 </div>
                 
                 <div className="flex-1 space-y-2">
-                  <h3 className="font-semibold text-gray-900">
+                  <h3 className="font-semibold primary-text">
                     {cert.title}
                   </h3>
-                  <p className="accent-text font-medium">
+                  <p className="primary-text font-medium">
                     {cert.issuer}
                   </p>
-                  <div className="flex justify-between items-center text-sm text-gray-500">
+                  <div className="flex justify-between items-center text-sm primary-text">
                     <span>{cert.date}</span>
                     <span className="font-mono">{cert.credentialId}</span>
                   </div>

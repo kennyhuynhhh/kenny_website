@@ -4,17 +4,12 @@ html {
   scrollbar-gutter: stable overlay;
   scrollbar-width: thin;
   scrollbar-color: rgba(0,0,0,0.2) transparent;
-  --accent-color: #119d30; /* for buttons, highlights, etc. */
-  --background-accent: #b7e2c0; /* for the main background gradient */
+  --primary: #bfc3c9;
+  --secondary: #23272f;
 }
 
-
-.accent-bg {
-  background-color: var(--accent-color) !important;
-}
-
-.accent-text {
-  color: var(--accent-color) !important;
+body {
+  @apply bg-gradient-to-b from-gray-900 via-gray-700 to-gray-900;
 }
 
 body::-webkit-scrollbar {
@@ -26,11 +21,28 @@ body::-webkit-scrollbar-thumb {
   border-radius: 4px;
 }
 
+/* Utility classes for dark mode */
+.dark .accent-bg {
+  background-color: var(--accent-color) !important;
+}
+.dark .accent-text {
+  color: var(--accent-color) !important;
+}
+
+.primary-bg {
+  background-color: var(--primary) !important;
+}
+.primary-text {
+  color: var(--primary) !important;
+}
+.secondary-bg {
+  background-color: var(--secondary) !important;
+}
+.secondary-text {
+  color: var(--secondary) !important;
+}
+
 /* Existing styles */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-body {
-    @apply bg-gradient-to-b from-gray-200 via-gray-100 to-white;
-}

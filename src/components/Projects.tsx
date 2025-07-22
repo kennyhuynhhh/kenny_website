@@ -33,17 +33,17 @@ const Projects = () => {
     <section id="projects" className="py-24">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-light primary-text mb-4">
             Projects
           </h2>
-          <p className="text-xl text-gray-600 font-light">
+          <p className="text-xl font-light primary-text">
             Selected works that showcase my development expertise
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+            <div key={index} className="group secondary-bg rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
               <div className="aspect-video overflow-hidden">
                 <img 
                   src={project.image} 
@@ -53,11 +53,11 @@ const Projects = () => {
               </div>
               
               <div className="p-6 space-y-4">
-                <h3 className="text-xl font-semibold text-gray-900">
+                <h3 className="text-xl font-semibold primary-text">
                   {project.title}
                 </h3>
                 
-                <p className="text-gray-600 leading-relaxed">
+                <p className="primary-text leading-relaxed">
                   {project.description}
                 </p>
                 
@@ -65,7 +65,7 @@ const Projects = () => {
                   {project.technologies.map((tech, techIndex) => (
                     <span 
                       key={techIndex}
-                      className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-md"
+                      className="px-2 py-1 primary-bg primary-text text-xs rounded-md"
                     >
                       {tech}
                     </span>
@@ -82,7 +82,7 @@ const Projects = () => {
                   </a>
                   <a 
                     href={project.githubUrl}
-                    className="flex items-center space-x-1 text-gray-600 hover:text-gray-700 transition-colors"
+                    className="flex items-center space-x-1 primary-text transition-colors"
                   >
                     <Github size={16} />
                     <span className="text-sm font-medium">Code</span>

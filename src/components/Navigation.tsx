@@ -37,9 +37,13 @@ const Navigation = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/80 backdrop-blur-md shadow-sm' : 'bg-transparent'
-    }`}>
+    <nav
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+      style={{
+        background: isScrolled ? 'rgba(62, 65, 71, 0.8)' : 'transparent',
+        color: 'var(--primary)'
+      }}
+    >
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex justify-center">
           <div className="flex space-x-8">
@@ -49,8 +53,8 @@ const Navigation = () => {
                 <div key={section.id} className="flex flex-col items-center">
                   <a
                     href={`#${section.id}`}
-                    className={`text-sm font-medium transition-all duration-200 hover:accent-text ${
-                      isActive ? 'accent-text' : 'text-gray-600'
+                    className={`text-sm font-medium transition-all duration-200 hover:primary-text ${
+                      isActive ? 'primary-text' : ''
                     } ${isInIframe ? 'pointer-events-none cursor-not-allowed' : ''}`}
                     onClick={isInIframe ? (e) => e.preventDefault() : undefined}
                     tabIndex={isInIframe ? -1 : 0}
@@ -59,7 +63,16 @@ const Navigation = () => {
                     {section.label}
                   </a>
                   {isActive && (
-                    <span className="mt-1 w-6 h-1 rounded-full accent-bg"></span>
+                    <span
+                      className="mt-1 mx-auto"
+                      style={{
+                        display: 'block',
+                        width: '24px',
+                        height: '4px',
+                        borderRadius: '9999px',
+                        background: 'var(--primary)',
+                      }}
+                    ></span>
                   )}
                 </div>
               );

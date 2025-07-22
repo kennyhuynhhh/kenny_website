@@ -20,9 +20,9 @@ const App = () => {
 
   return (
     <div
-      className="min-h-screen"
+      className="min-h-screen text-gray-100"
       style={{
-        background: 'linear-gradient(95deg, var(--background-accent) 0%, #fff 50%, #e5e7eb 100%)'
+        background: "radial-gradient(circle at 60% 40%,rgb(158, 161, 166) 0%,rgb(105, 106, 112) 40%, #23272f 80%, #181a20 100%)",
       }}
     >
       <Navigation />

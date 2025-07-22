@@ -12,14 +12,14 @@ const Hero = () => {
       <div className="max-w-4xl mx-auto px-6 text-center">
         <div className="space-y-8">
           <div className="space-y-4">
-            <h1 className="text-5xl md:text-7xl font-light text-gray-900 tracking-tight">
+            <h1 className="text-5xl md:text-7xl font-light primary-text tracking-tight">
               Kenny Huynh
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 font-light max-w-2xl mx-auto">
+            <p className="text-xl md:text-2xl font-light max-w-2xl mx-auto primary-text">
               Software Engineering Graduate. Mechanical Engineering Student.
             </p>
-            <p>
-              EVERYTHING IS A WORK IN PROGRESS
+            <p className="primary-text">
+              WORK IN PROGRESS LOL
             </p>
           </div>
           <div className="flex justify-center space-x-6 pt-8">
