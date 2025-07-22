@@ -78,66 +78,67 @@ const Experience = () => {
             <div key={index} className="group">
               <div className="pl-8 pb-12 relative">
                 <div className="absolute -left-2 top-0 w-4 h-4 accent-bg rounded-full"></div>
-                
                 <div className="space-y-4">
-                  <div className="flex items-center justify-between mb-1">
-                    {/* Company Logo */}
-                    {exp.company === "Atlassian" ? (
-                      <img
-                        src="/kenny_website/logos/atlassian.png"
-                        alt="Atlassian Logo"
-                        width={40}
-                        height={40}
-                        style={{ marginRight: 16, objectFit: 'contain' }}
-                      />
-                    ) : exp.company === "Calibration and Testing Services" ? (
-                      <img
-                        src="/kenny_website/logos/CATS.png"
-                        alt="Calibration and Testing Services Logo"
-                        width={40}
-                        height={40}
-                        style={{ marginRight: 16, objectFit: 'contain', borderRadius: '4px' }}
-                      />
-                    ) : exp.company === "Scale AI" ? (
-                      <img
-                        src="/kenny_website/logos/scale.png"
-                        alt="Scale AI Logo"
-                        width={40}
-                        height={40}
-                        style={{ marginRight: 16, objectFit: 'contain' }}
-                      />
-                    ) : exp.company === "Laing O’Rourke" ? (
-                      <img
-                        src="/kenny_website/logos/laingorourke.png"
-                        alt="Laing O’Rourke Logo"
-                        width={40}
-                        height={40}
-                        style={{ marginRight: 16, objectFit: 'contain',borderRadius: '4px'}}
-                      />
-                    ) : exp.company === "John Holland" ? (
-                      <img
-                        src="/kenny_website/logos/johnholland.png"
-                        alt="John Holland Logo"
-                        width={40}
-                        height={40}
-                        style={{ marginRight: 16, objectFit: 'contain', borderRadius: '4px'}}
-                      />
-                    ) : (
-                      <div style={{ width: 40, height: 40, borderRadius: '50%', background: 'var(--secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginRight: 16 }}>
-                        <span style={{ color: 'var(--primary)', fontSize: 18 }}>Logo</span>
+                  <div className="w-full">
+                    <div className="flex items-center mb-1">
+                      {/* Company Logo */}
+                      {exp.company === "Atlassian" ? (
+                        <img
+                          src="/kenny_website/logos/atlassian.png"
+                          alt="Atlassian Logo"
+                          width={40}
+                          height={40}
+                          style={{ marginRight: 16, objectFit: 'contain' }}
+                        />
+                      ) : exp.company === "Calibration and Testing Services" ? (
+                        <img
+                          src="/kenny_website/logos/CATS.png"
+                          alt="Calibration and Testing Services Logo"
+                          width={40}
+                          height={40}
+                          style={{ marginRight: 16, objectFit: 'cover', borderRadius: '4px' }}
+                        />
+                      ) : exp.company === "Scale AI" ? (
+                        <img
+                          src="/kenny_website/logos/scale.png"
+                          alt="Scale AI Logo"
+                          width={40}
+                          height={40}
+                          style={{ marginRight: 16, objectFit: 'contain', borderRadius: '4px'}}
+                        />
+                      ) : exp.company === "Laing O’Rourke" ? (
+                        <img
+                          src="/kenny_website/logos/laingorourke.png"
+                          alt="Laing O’Rourke Logo"
+                          width={40}
+                          height={40}
+                          style={{ marginRight: 16, objectFit: 'contain', borderRadius: '4px' }}
+                        />
+                      ) : exp.company === "John Holland" ? (
+                        <img
+                          src="/kenny_website/logos/johnholland.png"
+                          alt="John Holland Logo"
+                          width={40}
+                          height={40}
+                          style={{ marginRight: 16, objectFit: 'contain', borderRadius: '4px' }}
+                        />
+                      ) : (
+                        <div style={{ width: 40, height: 40, borderRadius: '50%', background: 'var(--secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginRight: 16 }}>
+                          <span style={{ color: 'var(--primary)', fontSize: 18 }}>Logo</span>
+                        </div>
+                      )}
+                      <div className="flex-1">
+                        <h3 className="text-xl font-medium primary-text m-0 p-0">{exp.role}</h3>
+                        <p className="text-lg primary-text font-medium m-0 p-0">{exp.company} — {exp.location}</p>
                       </div>
-                    )}
-                    <div>
-                      <h3 className="text-xl font-medium primary-text m-0 p-0">{exp.role}</h3>
-                      <p className="text-lg primary-text font-medium m-0 p-0">{exp.company} — {exp.location}</p>
+                      <div className="text-sm primary-text mb-2" style={{ whiteSpace: 'nowrap', textAlign: 'right' }}>{exp.period}</div>
                     </div>
-                    <div className="text-sm primary-text mb-2" style={{ marginLeft: 'auto', whiteSpace: 'nowrap' }}>{exp.period}</div>
+                    <ul className="list-disc pl-8 primary-text">
+                      {exp.bullets.map((item, idx) => (
+                        <li key={idx} className="mb-1">{item}</li>
+                      ))}
+                    </ul>
                   </div>
-                  <ul className="list-disc pl-8 primary-text">
-                    {exp.bullets.map((item, idx) => (
-                      <li key={idx} className="mb-1">{item}</li>
-                    ))}
-                  </ul>
                 </div>
               </div>
             </div>
