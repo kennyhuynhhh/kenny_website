@@ -11,8 +11,10 @@ import React, { useState, useEffect } from 'react';
 const Navigation = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isInIframe, setIsInIframe] = useState(false);
 
   useEffect(() => {
+    setIsInIframe(window.self !== window.top);
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
       // Update active section based on scroll position
@@ -49,9 +51,12 @@ const Navigation = () => {
                     href={`#${section.id}`}
                     className={`text-sm font-medium transition-all duration-200 hover:accent-text ${
                       isActive ? 'accent-text' : 'text-gray-600'
-                }`}
-              >
-                {section.label}
+                    } ${isInIframe ? 'pointer-events-none cursor-not-allowed' : ''}`}
+                    onClick={isInIframe ? (e) => e.preventDefault() : undefined}
+                    tabIndex={isInIframe ? -1 : 0}
+                    aria-disabled={isInIframe ? 'true' : undefined}
+                  >
+                    {section.label}
                   </a>
                   {isActive && (
                     <span className="mt-1 w-6 h-1 rounded-full accent-bg"></span>

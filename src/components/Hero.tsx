@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Hero = () => {
+  const [isInIframe, setIsInIframe] = useState(false);
+
+  useEffect(() => {
+    setIsInIframe(window.self !== window.top);
+  }, []);
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center">
       <div className="max-w-4xl mx-auto px-6 text-center">
@@ -13,16 +19,10 @@ const Hero = () => {
               Software Engineering Graduate. Mechanical Engineering Student.
             </p>
             <p>
-              EVEWRYTHING IS A WORK IN PROGREESS :D
+              EVERYTHING IS A WORK IN PROGRESS
             </p>
           </div>
           <div className="flex justify-center space-x-6 pt-8">
-            <button className="accent-bg text-white px-8 py-3 rounded-full hover:opacity-90 transition-colors duration-200 font-medium">
-              View Work
-            </button>
-            <button className="border border-gray-300 text-gray-700 px-8 py-3 rounded-full hover:border-gray-400 transition-colors duration-200 font-medium">
-              Contact
-            </button>
           </div>
         </div>
       </div>

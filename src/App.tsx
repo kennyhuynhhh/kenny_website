@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import Experience from './components/Experience';
@@ -7,7 +7,10 @@ import Certifications from './components/Certifications';
 import Awards from './components/Awards';
 
 const App = () => {
+  const [isInIframe, setIsInIframe] = useState(false);
+
   useEffect(() => {
+    setIsInIframe(window.self !== window.top);
     if (window.location.hash) {
       const id = window.location.hash.replace('#', '');
       const el = document.getElementById(id);
@@ -27,10 +30,13 @@ const App = () => {
         <Hero />
         {/* Bouncing arrow at the bottom center of the Hero section */}
         <a
-          href="#experience"
+          href={isInIframe ? undefined : "#experience"}
           aria-label="Scroll down"
-          className="absolute left-1/2 transform -translate-x-1/2 bottom-8 animate-bounce z-10"
+          className={`absolute left-1/2 transform -translate-x-1/2 bottom-8 animate-bounce z-10${isInIframe ? ' pointer-events-none cursor-not-allowed' : ''}`}
           style={{ display: 'block' }}
+          onClick={isInIframe ? (e) => e.preventDefault() : undefined}
+          tabIndex={isInIframe ? -1 : 0}
+          aria-disabled={isInIframe ? 'true' : undefined}
         >
           <svg
             className="w-12 h-12"

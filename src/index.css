@@ -4,9 +4,9 @@ html {
   scrollbar-gutter: stable overlay;
   scrollbar-width: thin;
   scrollbar-color: rgba(0,0,0,0.2) transparent;
-  --accent-color: #57a357; /* for buttons, highlights, etc. */
-  --background-accent: #b7e2c0; }/* for the main background gradient *
-
+  --accent-color: #119d30; /* for buttons, highlights, etc. */
+  --background-accent: #b7e2c0; /* for the main background gradient */
+}
 
 
 .accent-bg {
