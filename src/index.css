@@ -5,8 +5,9 @@ html {
   scrollbar-width: thin;
   scrollbar-color: rgba(0,0,0,0.2) transparent;
   --accent-color: #57a357; /* for buttons, highlights, etc. */
-  --background-accent: #b7e2c0; /* for the main background gradient */
-}
+  --background-accent: #b7e2c0; }/* for the main background gradient *
+
+
 
 .accent-bg {
   background-color: var(--accent-color) !important;
@@ -32,4 +33,4 @@ body::-webkit-scrollbar-thumb {
 
 body {
     @apply bg-gradient-to-b from-gray-200 via-gray-100 to-white;
-  }
+}
