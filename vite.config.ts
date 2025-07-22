@@ -7,6 +7,6 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-  base: '/kenny_website/',
+  // base: '/kenny_website/',   // <--- REMOVE or COMMENT OUT this line for Netlify!
 });
 
