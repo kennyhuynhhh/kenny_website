@@ -22,7 +22,7 @@ const App = () => {
     <div
       className="min-h-screen text-gray-100"
       style={{
-        background: "radial-gradient(circle at 60% 40%,rgb(158, 161, 166) 0%,rgb(105, 106, 112) 40%, #23272f 80%, #181a20 100%)",
+        background: "radial-gradient(circle at 50% 50%,rgb(128, 127, 127) 10%,rgb(105, 106, 112) 40%, #23272f 90%, #181a20 100%)",
       }}
     >
       <Navigation />
