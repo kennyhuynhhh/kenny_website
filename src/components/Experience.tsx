@@ -19,7 +19,7 @@ const Experience = () => {
       location: "Perth",
       period: "Jul 2023 – Present",
       bullets: [
-        "Calibrated precision electrical, temperature, pressure and dimensional instruments to ISO/IEC 17025 and NATA standards.",
+        "Calibrated electrical, temperature, pressure and dimensional instruments to ISO/IEC 17025 and NATA standards.",
         "Calculated uncertainty and tolerances for high-accuracy equipment.",
         "Automated calibration procedures using MET/CAL scripting.",
         "Built Arduino stepper motor systems to automate fixture positioning, with LCD, USB input, and limit switches."
@@ -76,11 +76,20 @@ const Experience = () => {
         <div className="space-y-12">
           {experiences.map((exp, index) => (
             <div key={index} className="group">
-              <div className="pl-8 pb-12 relative">
-                <div className="absolute -left-2 top-0 w-4 h-4 accent-bg rounded-full"></div>
+              <div
+                className="relative rounded-2xl mb-8 flex flex-col justify-center px-8 py-8"
+                style={{
+                  background: 'rgba(191,195,201,0.12)',
+                  backdropFilter: 'blur(12px)',
+                  WebkitBackdropFilter: 'blur(12px)',
+                  border: '1px solid rgba(255,255,255,0.12)',
+                  boxShadow: '0 4px 24px 0 rgba(0,0,0,0.12)'
+                }}
+              >
+                <div className="absolute -left-2 top-8 w-4 h-4 accent-bg rounded-full"></div>
                 <div className="space-y-4">
                   <div className="w-full">
-                    <div className="flex items-center mb-1">
+                    <div className="flex items-start mb-1">
                       {/* Company Logo */}
                       {exp.company === "Atlassian" ? (
                         <img
@@ -129,9 +138,10 @@ const Experience = () => {
                       )}
                       <div className="flex-1">
                         <h3 className="text-xl font-medium primary-text m-0 p-0">{exp.role}</h3>
-                        <p className="text-lg primary-text font-medium m-0 p-0">{exp.company} — {exp.location}</p>
+                        <span className="text-lg primary-text font-medium m-0 p-0">{exp.company}</span>
+                        <span className="text-lg primary-text font-normal m-0 p-0"> - {exp.location}</span>
                       </div>
-                      <div className="text-sm primary-text mb-2" style={{ whiteSpace: 'nowrap', textAlign: 'right' }}>{exp.period}</div>
+                      <div className="text-sm primary-text mb-2" style={{ whiteSpace: 'nowrap', textAlign: 'right', marginTop: '2px' }}>{exp.period}</div>
                     </div>
                     <ul className="list-disc pl-8 primary-text">
                       {exp.bullets.map((item, idx) => (
