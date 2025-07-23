@@ -4,75 +4,85 @@ import { ExternalLink, Github } from 'lucide-react';
 const Projects = () => {
   const projects = [
     {
+      title: "Personal Portfolio Website",
+      date: "2025",
+      description: "A single-page portfolio built with React and Vite to showcase my experience, projects, and credentials.",
+      features: [
+        "Responsive layout with smooth navigation",
+        "Organized sections for experience, projects, and more",
+        "Minimalist, clean and simple design",
+        "Embedded within a my 3D portfolio experience"
+      ],
+      technologies: [
+        "React", "Vite", "Tailwind CSS", "GitHub Pages"
+      ],
+      liveUrl: "#",
+      githubUrl: "#"
+    },
+    {
+      title: "3D Portfolio Experience",
+      date: "2025",
+      description: "A 3D web portfolio built with React Three Fiber, simulating a virtual workspace with interactive objects and embedded live content. Inspired by my own workspace.",
+      features: [
+        "Immersive 3D scene with free movement and viewing",
+        "Interactive camera transitions and clickable objects",
+        "Live website and interface overlays on object displays",
+        "Optimised lighting for aesthetics and performance"
+      ],
+      technologies: [
+        "React Three Fiber", "Drei", "Three.js", "Spline (GLB)", "iframe"
+      ],
+      liveUrl: "#",
+      githubUrl: "#"
+    },
+    {
+      title: "FlowState",
+      date: "2025",
+      description: "An app for students and teachers to track wellbeing, boost focus, and plan studies with AI-powered support.",
+      features: [
+        "Role-based dashboards for students and teachers",
+        "Mood tracking and wellbeing analytics",
+        "AI  tips and wellness advice (Mixtral-8x7B)",
+        "Guided meditations, VR, and calming 360° videos",
+        "Custom calendar and study session logging"
+      ],
+      technologies: [
+        "React Native", "Figma", "Hugging Face API", "Mixtral-8x7B", "A-Frame"
+      ],
+      liveUrl: "#",
+      githubUrl: "#"
+    },
+    {
+      title: "TBAG (Team Building Atlassian Games)",
+      date: "2025",
+      description: "A Slack bot game suite built at Atlassian’s ShipIt 60 Hackathon to boost team connection with daily multiplayer games.",
+      features: [
+        "ShipIt 60 finalist: Top 3 teams",
+        "Interactive mini-games for team bonding (Squiddle, Glassbridge, Tug of Squid)",
+        "Real-time scoring and global leaderboard",
+        "24/7 Slack bot (Python, Flask, Atlas microservice)",
+      ],
+      technologies: [
+        "Python", "Flask", "Slack API", "Atlas", "Figma"
+      ],
+      liveUrl: "#",
+      githubUrl: "#"
+    },
+    {
       title: "The Swamp of Life",
-      description: "A grid-based simulation modelling predator-prey interactions between ducks, newts, and shrimp. Animals have life cycles (baby, hungry, dead) and interact based on terrain, proximity, and species behaviour.",
+      date: "2022",
+      description: "A Python simulation of predator-prey dynamics in a swamp, with animal interaction based on terrain and behaviour.",
       features: [
         "Object-oriented species classes with unique movement, life cycle, and predator/prey logic",
         "CSV-driven terrain maps (e.g. swamp, land, water)",
         "Reproduction and predation based on proximity and state",
         "Hunger mechanics with targeted movement toward food",
-        "Command-line interface with adjustable simulation parameters",
-        "Visualised using Matplotlib with real-time updates"
       ],
       technologies: [
         "Python", "NumPy", "Matplotlib", "CSV parsing", "OOP"
       ],
-      liveUrl: "#", // Update with real URL if available
-      githubUrl: "#" // Update with real repo if available
-    },
-    {
-      title: "FlowState",
-      description: "A mobile-first student companion app designed to enhance wellbeing, focus, and academic productivity. Developed for the Learning Futures Challenge 2024, it supports both students and educators through mood tracking, study analytics, AI support, and interactive planning tools.",
-      features: [
-        "Role-based dashboards for students and teachers with stats, events, and tasks",
-        "Mood tracking with mascot companion and wellbeing history",
-        "AI-powered suggestions for study tips, wellbeing advice, and time management using Hugging Face’s Mixtral-8x7B model",
-        "Guided meditations, VR experiences, breathing exercises, and relaxing sounds",
-        "Embedded 360° calming videos via A-Frame for immersive wellbeing support",
-        "Study session logging, learning style selection, and efficiency tracking",
-        "Custom calendar with colour-coded events and deadline prioritisation",
-        "Integrated AI chat assistant with markdown-formatted responses and wellness prompts"
-      ],
-      technologies: [
-        "React Native", "Expo", "expo-router", "Hugging Face Inference API", "Mixtral-8x7B", "React Context", "A-Frame"
-      ],
-      liveUrl: "#", // Update with real URL if available
-      githubUrl: "#" // Update with real repo if available
-    },
-    {
-      title: "3D Portfolio Experience",
-      description: "A fully navigable 3D portfolio scene built with Three.js and React Three Fiber. The experience simulates a virtual workspace featuring interactive objects like a monitor, tablet, and clipboard that reveal live content, embedded websites, and project highlights.",
-      features: [
-        "Immersive 3D scene created in Spline and exported as GLB",
-        "Interactive camera transitions using modular CameraLerp system",
-        "Monitor with iframe overlay showing a live website (GitHub Pages)",
-        "Clipboard and tablet with embedded textures, resume display, and scrollable content",
-        "Decal-based image projection for clean texture clarity on meshes",
-        "Lighting and shadows optimised for visual fidelity and performance",
-        "Orbit controls restricted on focus to maintain user immersion",
-        "Built-in content gating — iframes and overlays only load on user interaction"
-      ],
-      technologies: [
-        "React Three Fiber", "Drei", "Three.js", "Tailwind CSS", "Spline (GLB)", "GitHub Pages", "Decal", "iframe integration", "useFrame", "useGLTF"
-      ],
-      liveUrl: "#", // Update with real URL if available
-      githubUrl: "#" // Update with real repo if available
-    },
-    {
-      title: "Personal Portfolio Website",
-      description: "A clean, single-page portfolio built with React and Vite, designed to showcase my professional experience, projects, certifications, and awards. Serves as a central hub for recruiters and collaborators.",
-      features: [
-        "Fully responsive layout with smooth navigation and scroll-based section anchors",
-        "Organized sections: Hero, Experience, Projects, Certifications, Awards",
-        "Clean typography, custom icons, and minimalist design for readability",
-        "Hosted and embedded via iframe in a 3D portfolio scene (monitor interaction)",
-        "Deployed with GitHub Pages and integrated with a custom domain"
-      ],
-      technologies: [
-        "React", "Vite", "Tailwind CSS", "GitHub Pages", "Custom Domain", "HTML5/CSS3"
-      ],
-      liveUrl: "#", // You can update this with your real URL
-      githubUrl: "#" // You can update this with your real repo
+      liveUrl: "#",
+      githubUrl: "#"
     }
   ];
 
@@ -101,10 +111,46 @@ const Projects = () => {
                 boxShadow: '0 4px 24px 0 rgba(0,0,0,0.12)'
               }}
             >
-              <div className="flex-1 p-6 space-y-4">
-                <h3 className="text-xl font-semibold primary-text">
-                  {project.title}
-                </h3>
+              <div className="flex-1 p-6 space-y-2">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <h3 className="text-xl font-semibold primary-text m-0">
+                      {project.title}
+                    </h3>
+                    {project.date && (
+                      <span className="block text-xs primary-text mt-1 opacity-50">{project.date}</span>
+                    )}
+                  </div>
+                  <div className="relative group flex items-center">
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-md hover:bg-[rgba(191,195,201,0.12)] transition-colors flex items-center justify-center"
+                      style={{ width: 24, height: 24 }}
+                    >
+                      <ExternalLink size={20} className="primary-text" />
+                    </a>
+                    <div className="absolute -top-12 left-1/2 -translate-x-1/2 bg-[var(--primary)] text-[var(--secondary)] text-xs px-3 py-2 rounded shadow opacity-0 group-hover:opacity-100 transition-opacity pointer-events-auto z-20 flex flex-col items-center gap-1">
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className=" hover:text-white"
+                      >
+                        Link
+                      </a>
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className=" hover:text-white"
+                      >
+                        Code
+                      </a>
+                    </div>
+                  </div>
+                </div>
                 <p className="primary-text leading-relaxed">
                   {project.description}
                 </p>
@@ -113,34 +159,29 @@ const Projects = () => {
                     <li key={idx} className="mb-1">{feature}</li>
                   ))}
                 </ul>
+                <div className="h-2"></div>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, techIndex) => (
-                    <span 
+                    <span
                       key={techIndex}
-                      className="px-2 py-1 primary-bg secondary-text text-xs rounded-md"
+                      className="px-2 py-1 text-xs rounded-md primary-text"
+                      style={{
+                        background: 'rgba(255,255,255,0.12)',
+                        border: '1px solid rgba(255,255,255,0.18)',
+                        backdropFilter: 'blur(4px)',
+                        WebkitBackdropFilter: 'blur(4px)',
+                        // color removed to use primary-text
+                        boxShadow: '0 0 8px 1px rgba(255,255,255,0.18)'
+                      }}
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
-                <div className="flex space-x-4 pt-2">
-                  <a 
-                    href={project.liveUrl}
-                    className="flex items-center space-x-1 primary-text transition-colors"
-                  >
-                    <span className="text-sm font-medium">Live Demo</span>
-                  </a>
-                  <a 
-                    href={project.githubUrl}
-                    className="flex items-center space-x-1 primary-text transition-colors"
-                  >
-                    <span className="text-sm font-medium">Code</span>
-                  </a>
-                </div>
               </div>
               {/* Photo placeholder */}
               <div className="flex items-center justify-center p-4">
-                <div style={{ width: 320, height: 320, borderRadius: 16, background: 'rgba(191,195,201,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary)', fontSize: 20, fontWeight: 500 }}>
+                <div style={{ width: 300, height: 300, borderRadius: 16, background: 'rgba(191,195,201,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary)', fontSize: 20, fontWeight: 500 }}>
                   Photo
                 </div>
               </div>

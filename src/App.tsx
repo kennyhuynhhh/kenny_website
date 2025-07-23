@@ -22,7 +22,8 @@ const App = () => {
     <div
       className="min-h-screen text-gray-100"
       style={{
-        background: "radial-gradient(circle at 50% 50%,rgb(128, 127, 127) 10%,rgb(105, 106, 112) 40%, #23272f 90%, #181a20 100%)",
+        background: "radial-gradient(circle at 50% 47%,rgb(121, 124, 129) 0%,rgb(105, 106, 112) 40%, #23272f 80%,rgb(25, 27, 35) 100%)",
+
       }}
     >
       <Navigation />
@@ -32,7 +33,7 @@ const App = () => {
         <a
           href={isInIframe ? undefined : "#experience"}
           aria-label="Scroll down"
-          className={`absolute left-1/2 transform -translate-x-1/2 bottom-8 animate-bounce z-10${isInIframe ? ' pointer-events-none cursor-not-allowed' : ''}`}
+          className={`absolute left-1/2 transform -translate-x-1/2 -ml-6 bottom-8 animate-bounce z-10${isInIframe ? ' pointer-events-none cursor-not-allowed' : ''}`}
           style={{ display: 'block' }}
           onClick={isInIframe ? (e) => e.preventDefault() : undefined}
           tabIndex={isInIframe ? -1 : 0}

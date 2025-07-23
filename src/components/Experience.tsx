@@ -3,13 +3,13 @@ import React from 'react';
 const Experience = () => {
   const experiences = [
     {
-      role: "Full-Stack Software Engineering Intern",
+      role: "Full-Stack Software Engineering Intern (& 2026 Graduate)",
       company: "Atlassian",
       location: "Sydney",
       period: "Nov 2024 – Feb 2025",
       bullets: [
-        "Developed full-stack features for the DevAI – Autodev team using React, TypeScript (frontend), and Kotlin (backend).",
-        "Integrated and evaluated LLMs including Claude, OpenAI, and Gemini to enhance developer tooling.",
+        "Assigned to the DevAI - Autodev team, working with React, TypeScript (frontend), and Kotlin (backend).",
+        "Worked with LLMs including Claude, OpenAI, and Gemini to enhance developer tooling.",
         "Collaborated in an Agile environment with designers and AI researchers to ship production-level features."
       ]
     },
@@ -19,9 +19,9 @@ const Experience = () => {
       location: "Perth",
       period: "Jul 2023 – Present",
       bullets: [
-        "Calibrated electrical, temperature, pressure and dimensional instruments to ISO/IEC 17025 and NATA standards.",
-        "Calculated uncertainty and tolerances for high-accuracy equipment.",
-        "Automated calibration procedures using MET/CAL scripting.",
+        "Calibrated electrical, temperature, pressure and dimensional instruments to NATA standards.",
+        "Calculated uncertainty and tolerances for high-accuracy equipment in compliance with ISO/IEC 17025.",
+        "Developed calibration procedures using MET/CAL code development and Microsoft Excel.",
         "Built Arduino stepper motor systems to automate fixture positioning, with LCD, USB input, and limit switches."
       ]
     },
@@ -33,7 +33,7 @@ const Experience = () => {
       bullets: [
         "Contributed to the Bulba ICE and Dolphin Coding Projects for LLM development.",
         "Analysed and evaluated AI model outputs for code quality, correctness, and performance.",
-        "Designed and proposed coding solutions across diverse domains to improve model reasoning and logic."
+        "Designed coding solutions across diverse domains to improve model reasoning and logic."
       ]
     },
     {
@@ -42,8 +42,8 @@ const Experience = () => {
       location: "Perth",
       period: "Nov 2023 – Feb 2024",
       bullets: [
-        "Supported the MELconnx project (Morley–Ellenbrook Line) as part of METRONET, focusing on the Bayswater viaduct construction.",
-        "Assisted with on-site inspections, technical drawings, and construction sequencing.",
+        "Supported the MELconnx project (Morley-Ellenbrook Line) as part of METRONET, focusing on the Bayswater viaduct construction.",
+        "Assisted with on-site inspections, technical drawings, construction sequencing and soil testing.",
         "Coordinated with structural teams to ensure alignment between design plans and implementation."
       ]
     },
@@ -136,14 +136,14 @@ const Experience = () => {
                           <span style={{ color: 'var(--primary)', fontSize: 18 }}>Logo</span>
                         </div>
                       )}
-                      <div className="flex-1">
+                      <div className="flex-1 mb-2" style={{ marginTop: '-7px' }}>
                         <h3 className="text-xl font-medium primary-text m-0 p-0">{exp.role}</h3>
                         <span className="text-lg primary-text font-medium m-0 p-0">{exp.company}</span>
                         <span className="text-lg primary-text font-normal m-0 p-0"> - {exp.location}</span>
                       </div>
                       <div className="text-sm primary-text mb-2" style={{ whiteSpace: 'nowrap', textAlign: 'right', marginTop: '2px' }}>{exp.period}</div>
                     </div>
-                    <ul className="list-disc pl-8 primary-text">
+                    <ul className="list-disc pl-8 primary-text -mb-2">
                       {exp.bullets.map((item, idx) => (
                         <li key={idx} className="mb-1">{item}</li>
                       ))}

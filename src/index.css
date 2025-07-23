@@ -13,12 +13,15 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 8px;
-  background: transparent;
+  display: none;
 }
 body::-webkit-scrollbar-thumb {
   background: rgba(0,0,0,0.4);
   border-radius: 4px;
+}
+.example {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 /* Utility classes for dark mode */
