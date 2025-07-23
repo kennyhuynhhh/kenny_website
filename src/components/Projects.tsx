@@ -41,10 +41,10 @@ const Projects = () => {
       description: "An app for students and teachers to track wellbeing, boost focus, and plan studies with AI-powered support.",
       features: [
         "Role-based dashboards for students and teachers",
+        "AI assistant for study tips and wellness advice (Mixtral-8x7B)",
+        "Guided meditations, VR, and 360° video integration",
         "Mood tracking and wellbeing analytics",
-        "AI  tips and wellness advice (Mixtral-8x7B)",
-        "Guided meditations, VR, and calming 360° videos",
-        "Custom calendar and study session logging"
+        "Custom calendar, study session logging and app integration"
       ],
       technologies: [
         "React Native", "Figma", "Hugging Face API", "Mixtral-8x7B", "A-Frame"
