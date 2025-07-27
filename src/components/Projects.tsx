@@ -102,7 +102,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="flex flex-row rounded-2xl transition-all duration-300 mb-8"
+              className="flex flex-col md:flex-row rounded-2xl transition-all duration-300 mb-8"
               style={{
                 background: 'rgba(191,195,201,0.12)',
                 backdropFilter: 'blur(12px)',
@@ -180,8 +180,8 @@ const Projects = () => {
                 </div>
               </div>
               {/* Photo placeholder */}
-              <div className="flex items-center justify-center p-4">
-                <div style={{ width: 300, height: 300, borderRadius: 16, background: 'rgba(191,195,201,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary)', fontSize: 20, fontWeight: 500 }}>
+              <div className="flex items-center justify-center p-4 w-full md:max-w-xs">
+                <div className="w-full aspect-[1/1] rounded-[16px] bg-[rgba(191,195,201,0.08)] flex items-center justify-center text-[var(--primary)] text-lg font-medium">
                   Photo
                 </div>
               </div>
