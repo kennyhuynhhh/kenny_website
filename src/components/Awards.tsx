@@ -1,57 +1,44 @@
 import React from 'react';
-import { Trophy, Star } from 'lucide-react';
+import { Trophy, Star, Award } from 'lucide-react';
 
 const Awards = () => {
   const awards = [
     {
-      title: "Best Innovation Award",
-      organization: "Tech Conference 2023",
-      description: "Recognized for developing an innovative solution that improved user engagement by 150%",
-      year: "2023",
-      type: "innovation"
+      title: "Vice-Chancellor's List",
+      organization: "Curtin University",
+      issuer: "Professor Harlene Hayne, Vice-Chancellor",
+      date: "Feb 2025",
+      description: "Attained membership of the Vice-Chancellor's List in the 3rd year of my degree, awarded to the top 1% of students in the course (94.25% SWA)",
+      type: "academic-excellence"
     },
     {
-      title: "Employee of the Year",
-      organization: "Current Company",
-      description: "Outstanding performance and leadership in delivering high-quality projects",
-      year: "2022",
-      type: "performance"
+      title: "Toussaint & Richardson Scholarship",
+      organization: "Curtin University",
+      issuer: "Ron Toussaint and David Richardson",
+      date: "May 2023",
+      description: "Recipient of the Toussaint & Richardson Scholarship awarded on the basis of academic excellence (90.75% CWA)",
+      type: "scholarship"
     },
     {
-      title: "Hackathon Winner",
-      organization: "Global Developer Challenge",
-      description: "First place winner for building a sustainable tech solution in 48 hours",
-      year: "2022",
-      type: "competition"
-    },
-    {
-      title: "Community Contributor",
-      organization: "Open Source Foundation",
-      description: "Recognized for significant contributions to open source projects",
-      year: "2021",
-      type: "community"
+      title: "5x Recognition of Academic Achievement - Letter of Commendation",
+      organization: "Curtin University",
+      issuer: "Vishnu Pareek, Dean of Engineering",
+      date: "2022-2024",
+      description: "The Faculty of Science and Engineering commends me for my academic performance in my units for semester 2 in 2022, and semesters 1 & 2 in 2023 and 2024.",
+      type: "academic-recognition"
     }
   ];
 
   const getIcon = (type: string) => {
     switch (type) {
-      case 'innovation':
-        return <Star size={20} className="text-yellow-600" />;
-      case 'competition':
-        return <Trophy size={20} className="accent-text" />;
+      case 'academic-excellence':
+        return <Trophy size={20} className="text-yellow-500" />;
+      case 'scholarship':
+        return <Star size={20} className="text-blue-500" />;
+      case 'academic-recognition':
+        return <Award size={20} className="text-green-500" />;
       default:
         return <Trophy size={20} className="text-green-600" />;
-    }
-  };
-
-  const getIconBg = (type: string) => {
-    switch (type) {
-      case 'innovation':
-        return 'bg-yellow-100 group-hover:bg-yellow-200';
-      case 'competition':
-        return 'bg-blue-100 group-hover:bg-blue-200';
-      default:
-        return 'bg-green-100 group-hover:bg-green-200';
     }
   };
 
@@ -63,35 +50,55 @@ const Awards = () => {
             Awards
           </h2>
           <p className="text-xl font-light primary-text">
-            Recognition for excellence and innovation in technology
+            Academic recognition and achievements
           </p>
         </div>
 
         <div className="space-y-6">
           {awards.map((award, index) => (
-            <div key={index} className="group secondary-bg p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-200">
-              <div className="flex items-start space-x-4">
-                <div className={`p-3 rounded-lg transition-colors duration-200 primary-bg`}>
-                  {getIcon(award.type)}
-                </div>
+            <div 
+              key={index} 
+              className="group p-6 rounded-xl transition-all duration-200"
+              style={{
+                background: 'rgba(191,195,201,0.12)',
+                backdropFilter: 'blur(12px)',
+                WebkitBackdropFilter: 'blur(12px)',
+                border: '1px solid rgba(255,255,255,0.12)',
+                boxShadow: '0 4px 24px 0 rgba(0,0,0,0.12)'
+              }}
+            >
+                              <div className="flex items-start space-x-4">
+                  <img
+                    src="/kenny_website/logos/curtin.jpeg"
+                    alt="Curtin University Logo"
+                    width={32}
+                    height={32}
+                    style={{ objectFit: 'contain', borderRadius: '8px', paddingTop: '4px' }}
+                  />
                 
-                <div className="flex-1 space-y-2">
+                <div className="flex-1 space-y-3">
                   <div className="flex justify-between items-start">
-                    <h3 className="text-xl font-semibold primary-text">
-                      {award.title}
-                    </h3>
-                    <span className="text-sm font-medium primary-bg px-3 py-1 rounded-full">
-                      {award.year}
-                    </span>
+                    <div>
+                      <h3 className="text-xl font-semibold primary-text">
+                        {award.title}
+                      </h3>
+                      <p className="primary-text font-medium">
+                        {award.organization}
+                      </p>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className="text-sm primary-text opacity-70">{award.date}</span>
+                    </div>
                   </div>
                   
-                  <p className="primary-text">
-                    {award.organization}
-                  </p>
-                  
-                  <p className="primary-text leading-relaxed">
-                    {award.description}
-                  </p>
+                  <div className="space-y-2">
+                    <p className="primary-text text-sm opacity-80">
+                      <span className="font-medium">Issued by:</span> {award.issuer}
+                    </p>
+                    <p className="primary-text leading-relaxed">
+                      {award.description}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

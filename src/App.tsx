@@ -52,9 +52,9 @@ const App = () => {
         </a>
       </div>
       <Experience />
+      <Awards />
       <Projects />
       <Certifications />
-      <Awards />
     </div>
   );
 };

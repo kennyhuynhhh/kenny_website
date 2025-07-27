@@ -3,9 +3,9 @@ import React, { useState, useEffect } from 'react';
   const sections = [
     { id: 'home', label: 'Home' },
     { id: 'experience', label: 'Experience' },
+    { id: 'awards', label: 'Awards' },
     { id: 'projects', label: 'Projects' },
     { id: 'certifications', label: 'Certifications' },
-    { id: 'awards', label: 'Awards' },
   ];
 
 const Navigation = () => {
