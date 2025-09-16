@@ -45,7 +45,7 @@ const Certifications = () => {
             Certifications
           </h2>
           <p className="text-xl font-light primary-text">
-          Professional Development and Courses Completed
+          Professional development and completed courses
           </p>
         </div>
 

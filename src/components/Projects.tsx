@@ -17,10 +17,11 @@ const Projects = () => {
       technologies: [
         "React", "Vite", "Tailwind CSS", "GitHub Pages"
       ],
-      liveUrl: "https://kennyhuynh.github.io/portfolio-website/",
+      liveUrl: "https://kennyhuynhhh.github.io/kenny_website/",
       photos: [
-        "/kenny_website/photos/portfolio/photo1.png",
-        "/kenny_website/photos/portfolio/photo2.png"
+        "/kenny_website/photos/port/photo1.png",
+
+
       ]
     },
     {
@@ -38,9 +39,9 @@ const Projects = () => {
       ],
       liveUrl: "https://kennyhuynhhh.github.io/kennyhuynh1/",
       photos: [
-        "/kenny_website/photos/3d-portfolio/photo1.png",
-        "/kenny_website/photos/3d-portfolio/photo2.png",
-        "/kenny_website/photos/3d-portfolio/photo3.png"
+        "/kenny_website/photos/3d/photo1.png",
+        "/kenny_website/photos/3d/photo2.png",
+        "/kenny_website/photos/3d/photo3.png",
       ]
     },
     {
@@ -87,6 +88,9 @@ const Projects = () => {
         "/kenny_website/photos/tbag/photo2.png",
         "/kenny_website/photos/tbag/photo3.png",
         "/kenny_website/photos/tbag/photo4.png",
+        "/kenny_website/photos/tbag/photo5.png",
+        "/kenny_website/photos/tbag/photo6.png",
+
       ]
     },
     {
@@ -135,7 +139,7 @@ const Projects = () => {
             Projects
           </h2>
           <p className="text-xl font-light primary-text">
-            Technical Projects & Personal Initiatives
+            Technical projects & personal initiatives
           </p>
         </div>
 

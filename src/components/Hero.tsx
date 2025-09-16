@@ -18,9 +18,14 @@ const Hero = () => {
             <p className="text-xl md:text-2xl font-light max-w-2xl mx-auto primary-text">
               Software Engineering Graduate. Mechanical Engineering Student.
             </p>
-            <p className="primary-text">
-              WORK IN PROGRESS LOL
-            </p>
+            <a
+              href="https://www.linkedin.com/in/kennyhuynh1910"
+              target="_blank"
+              rel="noopener noreferrer"
+  className="text-base md:text-lg text-gray-400 hover:text-gray-500 transition-colors duration-200 block "
+            >
+              LinkedIn
+            </a>
           </div>
           <div className="flex justify-center space-x-6 pt-8">
           </div>

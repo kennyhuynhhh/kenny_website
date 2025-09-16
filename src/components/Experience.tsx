@@ -125,7 +125,7 @@ const Experience = () => {
               Experience
             </h2>
             <p className="text-xl font-light primary-text">
-              Employment History and Internships
+              Employment history and internships
             </p>
           </div>
 
