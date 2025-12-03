@@ -1,48 +1,55 @@
-/* Overlay scrollbar and modern style */
+/* === Global scrollbar override === */
 html {
-  scroll-behavior: smooth;
-  scrollbar-gutter: stable overlay;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(0,0,0,0.2) transparent;
-  --primary: #bfc3c9;
-  --secondary: #23272f;
+	scroll-behavior: smooth;
+
+	/* Hide track completely on Firefox */
+	scrollbar-width: none;
+	scrollbar-color: transparent transparent;
 }
 
-body {
-  @apply bg-gradient-to-b from-gray-900 via-gray-700 to-gray-900;
+html::-webkit-scrollbar {
+	width: 0px; /* removes the default track */
+	height: 0px;
 }
 
+/* Add floating pill scrollbar ONLY on body */
 body::-webkit-scrollbar {
-  display: none;
+	width: 6px;
 }
+
+body::-webkit-scrollbar-track {
+	background: transparent !important;
+}
+
 body::-webkit-scrollbar-thumb {
-  background: rgba(0,0,0,0.4);
-  border-radius: 4px;
+	background: rgba(160, 160, 160, 0.4);
+	border-radius: 100px;
 }
-.example {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+
+/* Removes legacy scrollbar on Edge/IE */
+body {
+	-ms-overflow-style: none;
 }
 
 /* Utility classes for dark mode */
 .dark .accent-bg {
-  background-color: var(--accent-color) !important;
+	background-color: var(--accent-color) !important;
 }
 .dark .accent-text {
-  color: var(--accent-color) !important;
+	color: var(--accent-color) !important;
 }
 
 .primary-bg {
-  background-color: var(--primary) !important;
+	background-color: var(--primary) !important;
 }
 .primary-text {
-  color: var(--primary) !important;
+	color: var(--primary) !important;
 }
 .secondary-bg {
-  background-color: var(--secondary) !important;
+	background-color: var(--secondary) !important;
 }
 .secondary-text {
-  color: var(--secondary) !important;
+	color: var(--secondary) !important;
 }
 
 /* Existing styles */
