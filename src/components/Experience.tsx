@@ -28,7 +28,7 @@ const Experience = () => {
                 "Calibrated electrical, temperature, pressure and dimensional instruments to NATA standards.",
                 "Calculated uncertainty and tolerances for high-accuracy equipment in compliance with ISO/IEC 17025.",
                 "Developed automated calibration procedures using MET/CAL software and Microsoft Excel.",
-                "Built an Arduino stepper motor systems with C++ to automate fixture positioning, with LCD, USB input, and limit switches.",
+                "Built an Arduino stepper motor system with C++ to automate fixture positioning, with LCD, USB input, and limit switches.",
             ],
             photos: [
                 "/kenny_website/photos/cats/photo1.png",
@@ -72,7 +72,7 @@ const Experience = () => {
             period: "Nov 2023 – Feb 2024",
             bullets: [
                 "Supported on-site engineering activities for the METRONET “MELconnx” viaduct project connecting the Morley-Ellenbrook line to Perth’s rail network.",
-                "Assisted with design drawings and coordination between engineers, contractors andstakeholders",
+                "Assisted with design drawings and coordination between engineers, contractors and stakeholders",
                 "Coordinated with structural teams to ensure alignment between design plans and implementation.",
                 "Processed soil test reports and concrete quotes, estimates and documentation.",
             ],
